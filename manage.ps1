@@ -9,4 +9,7 @@ git push -u origin main
 git config user.name
 git config user.email
 
+git add *
+git commit -m "commit from $(Get-Date -Format "yyyy-MM-dd")"
+git push -u origin main
 
