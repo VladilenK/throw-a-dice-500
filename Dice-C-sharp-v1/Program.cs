@@ -1,5 +1,5 @@
 ﻿
-int setsLimit = 100;
+int setsLimit = 1000;
 int v101s = 0;
 int v102s = 0;
 int v103s = 0;
