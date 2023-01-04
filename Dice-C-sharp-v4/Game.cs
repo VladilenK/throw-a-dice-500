@@ -1,11 +1,19 @@
 ﻿namespace Puzzle;
-class Game
+public class Game
 {
-    public int SetsLimit { get; set; } = 1000;
-    public int Play()
+    // public int SetsLimit { get; set; } = 1000;
+    public List<int> Play(int limit, int stopPoint)
     {
-        Random rnd = new Random();
-        return rnd.Next(1, 7);
+        List<int> results = new List<int>();
+        for (int i = 0; i < limit; i++)
+        {
+            var set = new Set();
+            set.StopPoint = stopPoint;
+            results.Add(set.Play());
+        }
+
+        return results;
+
     }
 
 }

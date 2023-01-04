@@ -2,6 +2,7 @@
 class Set
 {
     public int StopPoint { get; set; } = 100;
+
     public int Play()
     {
         var dice = new Dice();
