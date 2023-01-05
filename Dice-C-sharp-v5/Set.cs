@@ -17,5 +17,15 @@ class Set
         }
         return currentPointsSum;
     }
+    public int Play(int stop)
+    {
+        var dice = new Dice();
+        int currentPointsSum = 0;
+        while (currentPointsSum <= stop)
+        {
+            currentPointsSum += dice.Throw();
+        }
+        return currentPointsSum;
+    }
 }
 
