@@ -1,22 +1,21 @@
+"""Interpret results with Pandas... """
 import pandas as pd
-from random import randrange
-import sys
-import dice, set, game
+import games, game, dice
 
 d = dice.Dice()
 print(d.lastValueThrown)
 print(d.throw())
 print(d.lastValueThrown)
 
-s = set.Set(100)
+s = game.Game(100)
 print(s.play())
 
-g = game.Game(1000)
-gamePlayed = g.play()
+g = games.Games(1000)
+gamesPlayed = g.play()
 print("Game Played:")
-print(gamePlayed)
+print(gamesPlayed)
 
-results = pd.Series(gamePlayed).sort_values()
+results = pd.Series(gamesPlayed).sort_values()
 print("Results grouped (values counted) :")
 print(results.value_counts())
 

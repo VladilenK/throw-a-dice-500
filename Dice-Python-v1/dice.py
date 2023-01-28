@@ -1,3 +1,4 @@
+import pandas as pd
 from random import randrange
 import sys
 
@@ -19,3 +20,6 @@ print("101:", v1, "%.2f" %  (v1/SetsLimit*100), "%")
 print("102:", v2, "%.2f" %  (v2/SetsLimit*100), "%")
 print("103:", v3, "%.2f" %  (v3/SetsLimit*100), "%")
 
+a = ['Apple', 'Bananas', 'Pears']
+s = pd.Series(a)
+print(s)
